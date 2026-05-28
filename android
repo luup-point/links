@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUUP. para Android</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #070707;
+      font-family: 'Archivo', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .logo {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      margin-bottom: 56px;
+    }
+
+    .headline {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 34px;
+      color: #f9f9f7;
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 96px;
+    }
+
+    .headline em {
+      font-style: normal;
+      color: #bfff00;
+    }
+
+    .early {
+      width: 100%;
+      border-top: 1px solid #222;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .early-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #f9f9f7;
+      opacity: 0.75;
+    }
+
+    .early-link {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #f9f9f7;
+      opacity: 0.75;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .early-link:active { opacity: 1; }
+
+    .early-link svg {
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+    }
+
+    .tagline {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 11px;
+      color: #f9f9f7;
+      opacity: 0.75;
+      margin-top: 52px;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <img class="logo" src="assets/logo.png" alt="LUUP." />
+
+    <h1 class="headline">Brevemente<br/>no <em>Google Play</em></h1>
+
+    <div class="early style="display:none;"">
+      <span class="early-label">Acesso antecipado</span>
+      <a href="apk/luup.apk" class="early-link" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Instalar APK directamente
+      </a>
+    </div>
+
+    <p class="tagline">Feeling lost is optional</p>
+
+  </div>
+</body>
+</html>
