@@ -51,11 +51,11 @@
     .early {
       width: 100%;
       border-top: 1px solid #222;
-      padding-top: 20px;
+      padding-top: 22px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
     }
 
     .early-label {
@@ -71,21 +71,58 @@
     .early-link {
       display: flex;
       align-items: center;
-      gap: 7px;
+      gap: 16px;
+      width: 95%;
+      padding: 18px 24px;
+      border-radius: 15px;
+      border: 2px solid #9c4dff;
       font-family: 'Poppins', sans-serif;
-      font-size: 12px;
-      font-weight: 400;
+      font-size: 14px;
+      font-weight: 500;
       color: #f9f9f7;
-      opacity: 0.75;
       text-decoration: none;
       transition: opacity 0.2s;
     }
 
-    .early-link:active { opacity: 1; }
+    .early-link:hover,
+    .early-link:active { opacity: 0.75; }
+
+    .early-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background: rgba(156,77,255,0.1);
+      color: #9c4dff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .early-link-label {
+      flex: 1;
+    }
+
+    .early-arrow {
+      color: #9c4dff;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .early-note {
+      font-family: 'Poppins', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 1.45;
+      color: #f9f9f7;
+      opacity: 0.58;
+      text-align: center;
+      max-width: 280px;
+    }
 
     .early-link svg {
-      width: 12px;
-      height: 12px;
+      width: 20px;
+      height: 20px;
       flex-shrink: 0;
     }
 
@@ -98,6 +135,14 @@
       letter-spacing: 0.02em;
     }
   </style>
+  <!-- Google Analytics (cookieless) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR04EJEE5H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CR04EJEE5H', { client_storage: 'none' });
+  </script>
 </head>
 <body>
   <div class="wrap">
@@ -106,16 +151,20 @@
 
     <h1 class="headline">Brevemente<br/>no <em>Google Play</em></h1>
 
-    <div class="early" style="display:none;"">
+    <div class="early">
       <span class="early-label">Acesso antecipado</span>
-      <a href="../apk/luup.apk" class="early-link" download>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <polyline points="7 10 12 15 17 10"/>
-          <line x1="12" y1="15" x2="12" y2="3"/>
-        </svg>
-        Instalar APK directamente
+      <a href="https://github.com/luup-point/links/releases/download/android-v1.1.8-14/luup-1.1.8-14.apk" class="early-link" onclick="gtag('event', 'click', {event_category: 'button', event_label: 'android_apk'})">
+        <span class="early-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+        </span>
+        <span class="early-link-label">Download App (APK)</span>
+        <span class="early-arrow">›</span>
       </a>
+      <p class="early-note">Versão 1.1.8. No Android, poderá ser necessário permitir a instalação a partir do browser.</p>
     </div>
 
     <p class="tagline">Feeling lost is optional</p>
